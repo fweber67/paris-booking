@@ -1,0 +1,114 @@
+/* Grundstruktur für den gesamten Body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Vertikale Ausrichtung der Elemente */
+    justify-content: center; /* Vertikale Zentrierung */
+    align-items: center; /* Horizontale Zentrierung */
+    height: 100vh; /* Füllt den gesamten Viewport */
+    margin: 0;
+    background-color: #f0f4f8; /* Helles Hintergrundfarbe */
+    text-align: center; /* Zentriert den Text auf der gesamten Seite */
+}
+
+/* Container für das Formular */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Maximale Breite des Formulars */
+    box-sizing: border-box; /* Sorgt dafür, dass das Padding die Gesamtbreite nicht verändert */
+    display: flex;
+    flex-direction: column; /* Formularelemente untereinander anordnen */
+    align-items: center; /* Zentriert alle Formularelemente */
+}
+
+/* Eingabefeld für das Datum (Klicke hier um Daten auszuwählen) */
+#date-picker {
+    width: 100%; /* Breite des Eingabefeldes */
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #1E90FF; /* Blauer Rand */
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center; /* Zentriert den Text im Eingabefeld */
+}
+
+/* Eingabefeld für den Namen und der Submit-Button */
+input[type="text"], button {
+    width: 100%; /* Gleiche Breite für beide */
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #1E90FF; /* Blauer Rand */
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center; /* Text zentrieren */
+}
+
+/* Verkleinern des Eingabefelds für den Namen und des Buttons */
+input[type="text"], button {
+    max-width: 300px; /* Maximale Breite für Name und Button */
+}
+
+/* Hover-Effekte für den Submit-Button */
+button:hover {
+    background-color: #1E90FF;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bestätigungsmeldung (zentriert) */
+#confirmation-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #1E90FF;
+}
+
+/* Anzeige der gebuchten Tage */
+#booked-dates-list {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #1E90FF;
+    text-align: center; /* Zentriert die Anzeige der gebuchten Tage */
+}
+
+/* Verhindert, dass der Text im Eingabefeld abgeschnitten wird */
+input[type="text"], #date-picker {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Überschrift */
+h1, h2 {
+    color: #1E90FF; /* Blau für Überschriften */
+    margin: 0; /* Entfernt Standard-Abstände */
+    padding: 0; /* Entfernt Standard-Padding */
+    font-size: 24px;
+    text-align: center; /* Sorgt dafür, dass die Überschrift zentriert wird */
+}
+
+/* Stellen sicher, dass keine anderen Stile der Formularelemente abweichen */
+form {
+    display: flex;
+    flex-direction: column; /* Elemente im Formular untereinander anordnen */
+    align-items: center; /* Formularelemente horizontal zentrieren */
+    justify-content: center; /* Formularelemente vertikal zentrieren */
+    padding: 10px;
+    text-align: center; /* Text in Formular zentrieren */
+    width: 100%;
+}
+
+/* Zusätzliche Abstände zwischen den Eingabefeldern und den Buttons */
+input[type="text"], button, #date-picker {
+    margin-bottom: 15px; /* Abstand zwischen den Eingabefeldern */
+}
+
+/* Verhindert, dass der Text im Eingabefeld abgeschnitten wird */
+input[type="text"], #date-picker {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

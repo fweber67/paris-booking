@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminbuchung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">  <!-- Dein externer CSS-Link -->
+</head>
+<body>
+    <header>
+        <h1>Besuchstermin bei Weber's in Paris buchen</h1>
+    </header>
+    <main>
+        <section id="calendar">
+            <h2>Verfügbare Termine</h2>
+            <div>
+                <label for="date-picker">Wähle deine gewünschten Tage:</label>
+                <input type="text" id="date-picker" placeholder="Klicke hier, um Daten auszuwählen" readonly>
+            </div>
+        </section>
+        <section id="booking-form">
+            
+            <form id="bookingForm">
+                <label for="name">Dein Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <button type="submit">Buchung abschliessen</button>
+            </form>
+            <p id="confirmation-message" style="display:none;">Deine Buchung war erfolgreich - wir freuen uns auf Euren Besuch!</p>
+        </section>
+    </main>
+
+    <!-- Bereich zur Anzeige der gebuchten Tage -->
+    <h2>Bereits gebuchte Tage:</h2>
+    <p id="booked-dates-list">Es gibt noch keine gebuchten Tage.</p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
